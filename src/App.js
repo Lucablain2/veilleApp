@@ -3,22 +3,46 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  var x = "leo";
+  const Button = ({ label, style:{width}, onclick }) => {
+    return (
+      <button
+        onClick={onclick}
+        style={{
+          backgroundColor: 'lightgrey',
+          color: 'black',
+          borderRadius: 25,
+          padding: '10px 10px',
+          whiteSpace: 'nowrap',
+          width: '250px'
+        }}>
+        Chercher article
+      </button>
+    )
+  }
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Articles sur le REACT :
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Button
+          label="Recherhce article"
+          style={{width: 100}}
+          onClick={()=>console.log('clicked!')}
+        />
       </header>
+      <body>
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+      </body>
     </div>
   );
 }
