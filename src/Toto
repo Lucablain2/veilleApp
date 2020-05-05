@@ -1,0 +1,54 @@
+import React from 'react';
+import './App.css';
+
+function App() {
+
+  const Button = ({ label, style:{width}, handleClick }) => {
+    return (
+      <button
+        onClick={handleClick}
+        style={{
+          backgroundColor: 'lightgrey',
+          color: 'black',
+          borderRadius: 25,
+          padding: '10px 10px',
+          whiteSpace: 'nowrap',
+          width: '250px'
+        }}>
+        Chercher article
+      </button>
+    )
+  }
+
+  handleClick() {
+    console.log('this vaut :', this);
+  }
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <p>
+          Articles sur le REACT :
+        </p>
+        <Button
+          label="Recherhce article"
+          style={{width: 100}}
+          onClick={handleClick}
+        />
+      </header>
+      <body>
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+      </body>
+    </div>
+  );
+}
+
+export default App;
